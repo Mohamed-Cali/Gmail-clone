@@ -31,3 +31,23 @@
 .emailList::-webkit-scrollbar {
     display: none;
 }
+.icons {
+    display: inline-block;
+    margin: none;
+    padding: none;
+}
+
+.emailList_settingsRight {
+    display: flex;
+}
+
+.icon1 {
+    display: inline-block;
+}
+
+
+@media screen and (max-width: 420px){
+    .icons {
+        display: none;
+    }
+}

@@ -1,6 +1,7 @@
 .emailRow {
     display: flex;
     align-items: center;
+    justify-content:space-around;
     height: 50px;
     border-bottom: 1px solid whitesmoke;
     cursor: pointer;
@@ -15,12 +16,12 @@
 }
 .emailRow__message {
     display: flex;
-    flex: 0.8;
+    flex: 0.6;
     align-items: center;
     font-size: 15px;
 }
 .emailRow__message > h4 {
-    width: 400px;
+    width: 700px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -28,12 +29,12 @@
     padding-right: 5px;
 }
 .emailRow__title {
-    font-size: 17px;
+    font-size: 14px;
     flex: 0.3;
 }
 .emailRow__time {
-    padding-right: 15px;
-    font-size: 9px;
+    padding-right: 10px;
+    font-size: 6px;
     font-weight: bold;
     
 }
@@ -41,4 +42,40 @@
     font-weight: 400;
     color: gray;
     font-size: 13px;
+}
+
+
+
+@media screen and (max-width: 900px){
+    .emailRow__options {
+        display: none;
+    }
+
+    .emailRow__message {
+        font-size: 13px;
+    }
+    .emailRow__description {
+        font-size: 12px;   
+    }
+}
+
+@media screen and (max-width: 420px){
+
+    .emailRow__message {
+        font-size: 8px;
+    }
+    .checkbox {
+        display: none;
+    }
+
+    .emailRow__title {
+        font-size: 9px;
+    
+    }
+
+    .emailRow__description {
+        font-size: 7px;   
+    }
+
+    
 }

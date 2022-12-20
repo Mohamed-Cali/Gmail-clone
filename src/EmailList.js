@@ -45,18 +45,25 @@ function EmailList() {
 					</IconButton>
 				</div>
 				<div className="emailList_settingsRight">
-					<IconButton>
-						<ChevronLeftIcon />
-					</IconButton>
-					<IconButton>
-						<ChevronRightIcon />
-					</IconButton>
-					<IconButton>
-						<KeyboardHideIcon />
-					</IconButton>
-					<IconButton>
-						<SettingsIcon />
-					</IconButton>
+					<div className='icon1'>
+						<IconButton>
+							<ChevronLeftIcon />
+						</IconButton>
+						<IconButton>
+							<ChevronRightIcon />
+						</IconButton>
+					</div>
+					<div className='icons'>
+						<div>
+							<IconButton>
+								<KeyboardHideIcon />
+							</IconButton>
+					
+							<IconButton>
+								<SettingsIcon />
+							</IconButton>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -74,29 +81,10 @@ function EmailList() {
 					title={to}
 					subject={subject}
 					description={message}
-					time={new Date(timestamp?.seconds*1000).toUTCString()}
+					time={new Date(timestamp?.seconds*1000).toDateString()}
 					/>
 				))} 
 
-				<EmailRow title="Twitch" subject="Hey fellow streamer!!" description="This is a test" />
-				<EmailRow title="Twitch" subject="Hey fellow streamer!!" description="This is a test" />
-				<EmailRow title="Twitch" subject="Hey fellow streamer!!" description="This is a test" />
-				<EmailRow title="Twitch" subject="Hey fellow streamer!!" description="This is a test" />
-				<EmailRow title="Twitch" subject="Hey fellow streamer!!" description="This is a test" />
-				<EmailRow title="Twitch" subject="Hey fellow streamer!!" description="This is a test" />
-				<EmailRow title="Twitch" subject="Hey fellow streamer!!" description="This is a test" />
-				<EmailRow title="Twitch" subject="Hey fellow streamer!!" description="This is a test" />
-				<EmailRow title="Twitch" subject="Hey fellow streamer!!" description="This is a test" />
-				<EmailRow title="Twitch" subject="Hey fellow streamer!!" description="This is a test" />
-				<EmailRow title="Twitch" subject="Hey fellow streamer!!" description="This is a test" />
-				<EmailRow title="Twitch" subject="Hey fellow streamer!!" description="This is a test" />
-				<EmailRow title="Twitch" subject="Hey fellow streamer!!" description="This is a test" />
-				<EmailRow title="Twitch" subject="Hey fellow streamer!!" description="This is a test" />
-				<EmailRow title="Twitch" subject="Hey fellow streamer!!" description="This is a test" />
-				<EmailRow title="Twitch" subject="Hey fellow streamer!!" description="This is a test" />
-				<EmailRow title="Twitch" subject="Hey fellow streamer!!" description="This is a test" />
-				<EmailRow title="Twitch" subject="Hey fellow streamer!!" description="This is a test" />
-				<EmailRow title="Twitch" subject="Hey fellow streamer!!" description="This is a test" />
 				
 			</div>
 		</div>

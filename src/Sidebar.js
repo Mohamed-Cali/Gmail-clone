@@ -19,24 +19,48 @@ import { useHistory } from 'react-router-dom'
 
 function Sidebar() {
     const dispatch = useDispatch(); 
-    const history = useHistory()
+    const history = useHistory();
 
     return (
         <div className='sidebar'>
-            <Button 
-                startIcon={<EditIcon fontSize='large' />}
-                className='sidebar__compose'
-                onClick={() => dispatch(openSendMessage())}
-            >
-                Compose
-            </Button>
-            <SidebarOption Icon={ InboxIcon } title='Inbox' number={69} selected={true} onClick={() => history.push('/')}/>
-            <SidebarOption Icon={ StarIcon } title='Starred' number={17}/>
-            <SidebarOption Icon={ AccessTimeIcon } title='Snoozed' number={9}/>
-            <SidebarOption Icon={ SendIcon } title='Sent' number={37}/>
-            <SidebarOption Icon={ DraftsIcon } title='Drafts' number={5}/>
-            <SidebarOption Icon={ ArrowDropDownIcon } title='More' />
+            <div>
+                <div className='compose_button'>
+                    <Button 
+                        startIcon={<EditIcon />}
+                        className='sidebar__compose'
+                        onClick={() => dispatch(openSendMessage())}
+                    >
+                            
+                        Compose
+                    </Button>
+                </div>
+            </div>
+            <div className='pen'>
+                <div>
+                    <EditIcon fontSize='medium' onClick={() => dispatch(openSendMessage())}/>
+                </div>
+            </div>
+            <div>
+                <div className='sidebar_large' onClick={() => history.push('/')}>
+                    <SidebarOption Icon={ InboxIcon } title='Inbox' number={63} selected={true} />
+                    <SidebarOption Icon={ StarIcon } title='Starred' number={17}/>
+                    <SidebarOption Icon={ AccessTimeIcon } title='Snoozed' number={9}/>
+                    <SidebarOption Icon={ SendIcon } title='Sent' number={37}/>
+                    <SidebarOption Icon={ DraftsIcon } title='Drafts' number={5}/>
+                    <SidebarOption Icon={ ArrowDropDownIcon } title='More' />
+                </div>
+            </div>
 
+            <div>
+                <div className='sidebar_small' onClick={() => history.push('/')}>
+                    <SidebarOption Icon={ InboxIcon } selected={true} onClick={() => history.push('/')}/>
+                    <SidebarOption Icon={ StarIcon }/>
+                    <SidebarOption Icon={ AccessTimeIcon }/>
+                    <SidebarOption Icon={ SendIcon } />
+                    <SidebarOption Icon={ DraftsIcon }/>
+                    <SidebarOption Icon={ ArrowDropDownIcon }/>
+                </div>
+            </div>
             <div className='sidebar__footer'>
                 <div className='sidebar__footerIcons'>
                     <IconButton>

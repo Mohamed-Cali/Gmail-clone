@@ -23,9 +23,11 @@ function EmailRow ({ id, title, subject, description, time }) {
     }
     return (
         <div onClick={openMail} className='emailRow'>
-
-            <div className='emailRow__options'>
+            <div className='checkbox'>
                 <Checkbox />
+            </div>
+            <div className='emailRow__options'>
+                
                 <IconButton>
                     <StarBorderIcon />
                 </IconButton>
